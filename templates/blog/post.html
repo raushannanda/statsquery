@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/post.css'%}">
+</head>
+<body>
+    {% include 'navbar/index.html' %}
+    <div>
+        <div class="navmar"></div>
+        <!--Start of main div -->
+        <div class="maindiv">
+            <div class="contents">
+            </div>
+            <!--A short description of topics in list of contents -->
+            <div class="descrip">
+                <div class="rellink">
+                    <a href="/blog/{{posts.category}}/{{catindex}}">Inference> New Post</a>
+                </div>
+                <div class="ptitle">
+                    <h4>Welcome</h4>
+                </div>
+                <hr>
+                <div class="pdetail">
+                    <div class="author"><strong>BY :Raushan Kumar</strong></div>
+                    <div class="created">10-12-2020</div>
+                </div>
+                <hr>
+                <div class="pdes">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+    
+                    The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</div>
+            </div>
+            <!--siderbar in right-->
+            <div class="rightside">
+                <div class="contitle">
+                    Solved Papers
+                </div>
+                
+                <hr style="margin:0px">
+                <a href="/blog/solution/{{exam.exam_name}}">
+                <div class="quelist"> 
+                   1. Iss
+                </div>
+                </a>
+            </div>
+        </div>
+        <!--end of main div-->
+    </div>
+    
+    <script src="{% static 'blog/blog.js' %}"></script>
+</body>
+</html>

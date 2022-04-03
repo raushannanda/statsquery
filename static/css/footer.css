@@ -1,0 +1,36 @@
+.footer center {
+    padding: 10px;
+    background-color: #7b68ee;
+    color: white;
+  }
+  
+  .footer hr {
+    margin: 0;
+    border: 1px solid #1304e7;
+  }
+  
+  .footer .fgrid {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    justify-items: center;
+    background-color: #7b68ee;
+  }
+  
+  .footer .fgrid div {
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
+  
+  .footer .fgrid div h5 {
+    color: #050804;
+  }
+  
+  .footer .fgrid div a {
+    text-decoration: none;
+    color: white;
+  }
