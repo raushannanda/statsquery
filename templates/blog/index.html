@@ -14,7 +14,7 @@
 
 </head>
 <body>
-
+    {% include "navbar/index.html" %}
     <div style="height:75px;"></div>
     <div class="blogmain">
         <div class="left">
@@ -60,7 +60,7 @@
           </div>
         </a>
         {% endfor %}
-        
+        {% include "footer/index.html" %}
     </div>
   
     <script src="{% static 'js/home.js'%}"></script>
