@@ -1,0 +1,375 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- bootstrap Icons -->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css" integrity="sha384-ejwKkLla8gPP8t2u0eQyL0Q/4ItcnyveF505U0NIobD/SMsNyXrLti6CWaD0L52l" crossorigin="anonymous">
+
+    <!-- Home CSS -->
+
+    <link rel="stylesheet" href="{% static 'css/home.css'%}">
+
+    <title>Document</title>
+
+    <!-- AOS -->
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- Bootstrap -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <!-- Share Icons -->
+
+    <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=62446e0d3476c200195432fc&product=inline-share-buttons" async="async"></script>
+
+    
+
+</head>
+
+<body>
+
+<!-- TOP Navbar Start -->
+
+<div class="nav-x" id="nav">
+
+    <!-- Logo Nav Header -->
+
+    <div class="logo">
+
+        <span><a href="{% url 'home' %}"><img src="{% static 'images/logo.svg'%}" alt=""></a></span>
+
+    </div>
+
+    <div class="menu">
+
+        <ul class="largemenulist">
+
+            <li class="menuitem"><a href="{% url 'home' %}">HOME</a></li>
+
+            <li class="menuitem"><a href="{% url 'blog' %}">Blog</a></li>
+
+            <li class="menuitem"><a href="{% url 'solution' %}">SOLUTIONS</a></li>
+
+            <li class="menuitem"><a href="{% url 'contact' %}">CONTACT</a></li>
+
+            <li class="menuitem"><a href="{% url 'about' %}">ABOUT</a></li>
+
+        </ul>
+
+        <div class="menuicon"><button onclick="showdropmenu()"><i class="fa-solid fa-bars" id="mit"></i></button></div>
+
+    </div>
+
+</div>
+
+<!-- Top Navbar End -->
+
+
+
+    <!-- Top Navbar For Small Screen Start-->
+
+    <div class="dropmenu hidemenu" id="dropmenu">
+
+        <ul class="menulist">
+
+            <li class="menuitem"><a href="{% url 'home' %}">HOME</a></li>
+
+            <li class="menuitem"><a href="{% url 'blog' %}">Blog</a></li>
+
+            <li class="menuitem"><a href="{% url 'solution' %}">SOLUTIONS</a></li>
+
+            <li class="menuitem"><a href="{% url 'contact' %}">CONTACT</a></li>
+
+            <li class="menuitem"><a href="{% url 'about' %}">ABOUT</a></li>
+
+        </ul>
+
+    </div>
+
+    <!-- Top Navbar For Small Screen End-->
+
+
+
+    <!-- Landing of website Starts -->
+
+    <div class="contents">
+
+        <div class="left" data-aos="fade-right" 
+
+        data-aos-delay="10"
+
+        data-aos-duration="1000">
+
+            <h1>welcome</h1>
+
+            <h4>Interested in Statistics?</h4>
+
+            <p>If Yes , You are at the right place. Statsquery helps you in learning statistics from basics.</p>
+
+            <a href="{% url 'blog' %}">Start Learning</a>
+
+        </div>
+
+        <div class="right" data-aos="fade-down" 
+
+        data-aos-delay="10"
+
+        data-aos-duration="1000">
+
+            <img src="{% static 'images/stat.png'%}" alt="">
+
+        </div>
+
+    </div>
+
+    <div>
+
+        <svg width="100%" height="100%" id="svg" viewBox="0 0 1440 300" xmlns="http://www.w3.org/2000/svg" class="transition duration-300 ease-in-out delay-150"><defs><linearGradient id="gradient" x1="50%" y1="100%" x2="50%" y2="0%"><stop offset="5%" stop-color="#7c68eeff"></stop><stop offset="95%" stop-color="#7c68e5ff"></stop></linearGradient></defs><path d="M 0,400 C 0,400 0,200 0,200 C 130.57142857142856,232.78571428571428 261.1428571428571,265.57142857142856 391,271 C 520.8571428571429,276.42857142857144 649.9999999999999,254.5 757,236 C 864.0000000000001,217.5 948.8571428571429,202.42857142857144 1059,197 C 1169.142857142857,191.57142857142856 1304.5714285714284,195.78571428571428 1440,200 C 1440,200 1440,400 1440,400 Z" stroke="none" stroke-width="0" fill="url(#gradient)" class="transition-all duration-300 ease-in-out delay-150 path-0" transform="rotate(-180 720 200)"></path></svg>
+
+    </div>
+
+    <!-- Landing of website Ends -->
+
+    <!-- Features Starts -->
+
+    <div class="fmain">
+
+        <h2>
+
+            FEATURES
+
+        </h2>
+
+        <div class="feature">
+
+            <div class="card ca" style="width: 18rem;">
+
+                <img src="{% static 'images/feature3.svg'%}" class="card-img-top" alt="...">
+
+                <div class="card-body">
+
+                <h5 class="card-title">Statistics</h5>
+
+                <p class="card-text">Learn statistical concept in deep. Our Contents are made after deep researching.</p>
+
+                {% comment %} <a href="#" class="btn btn-primary"></a> {% endcomment %}
+
+                </div>
+
+            </div>
+
+            <div class="card cb" style="width: 18rem;">
+
+                <img src="{% static 'images/feature1.svg'%}" class="card-img-top" alt="...">
+
+                <div class="card-body">
+
+                <h5 class="card-title">Solved Papers</h5>
+
+                <p class="card-text">Statsquery provide you previous years solved question of many competitive exams  in detail </p>
+
+               
+
+                </div>
+
+            </div>
+
+            <div class="card cc" style="width: 18rem;">
+
+                <img src="{% static 'images/feature2.svg'%}" class="card-img-top" alt="...">
+
+                <div class="card-body">
+
+                <h5 class="card-title">Prepare For Exams</h5>
+
+                <p class="card-text">Statsquery helps you in preparing for different statistical competitive exams.</p>
+
+               
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Features Ends -->
+
+
+
+    <!-- Latest Posts Starts -->
+
+    <div class="posts">
+
+        <h2 class="">Latest Articles</h2>
+
+        <div class="postgrid">
+
+            {% for post in posts %}
+
+            <div class="card"
+
+              data-aos="fade-up" 
+
+              data-aos-delay="10"
+
+              data-aos-duration="1000"
+
+              style="width: 18rem;">
+
+                <div class="card-body">
+
+                <h5 class="card-title">{{post.title}}</h5>
+
+                <hr>
+
+                <p class="card-text">{{post.post|truncatechars:100}}.</p>
+
+                <a href="{% url 'post' post.sno %}" class="btn btn-primary">Read More</a>
+
+                </div>
+
+                <div class="card-footer">
+
+                    <small class="text-muted">Last updated {{post.last_updated}}</small>
+
+                  </div>
+
+            </div>
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+    <!-- Latest Posts Ends -->
+
+    
+
+    <!-- Subscribe Starts -->
+
+    <div class="subscribe">
+
+        <h2>GET UPDATES</h2>
+
+        <h4>Stay Updated With Statsquery New Articles</h4>
+
+        <form action="" method="post">
+
+        <div class="inputbox">
+
+            <input placeholder="Email Address" type="email">
+
+        </div>
+
+        <div class="agree">
+
+            <input type="checkbox" name="agree" id=""><span> I've read and agree to statsquery's written <a href="">Privacy Policy</a></span> and <a href="">TermsConditions</a>
+
+        </div>
+
+        <div class="sub">
+
+            <button type="submit">SUBSCRIBE</button>
+
+        </div>
+
+        </form>
+
+    </div>
+
+    <!-- Subscribe Ends -->
+
+    
+
+    <!-- Share Icons Starts -->
+
+    <div class="sharethis-inline-share-buttons share"></div>
+
+    <!-- Share Icons Ends -->
+
+
+
+    <!-- Footer Section Starts -->
+
+    <div>
+
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 300"><path fill="#7b68ee" fill-opacity="10" d="M0,160L120,181.3C240,203,480,245,720,245.3C960,245,1200,203,1320,181.3L1440,160L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path></svg>
+
+    </div>
+
+
+
+    <div class="footer" style="height:100px;background-color:mediumslateblue;width: 100%;">
+
+        <div class="fgrid">
+
+            <div>
+
+                <h5>Important Links</h5>
+
+                <p><a href="{% url 'blog' %}">Blog</a></p>
+
+                <p><a href="{% url 'solution' %}">Exams Solution</a></p>
+
+            </div>
+
+            <div>
+
+                <h5>Statsquery</h5>
+
+                <p><a href="{% url 'about' %}">About</a></p>
+
+                <p><a href="{% url 'privacy' %}">Privacy Policy</a></p>
+
+                <p><a href="{% url 'terms' %}">Terms Conditions</a></p>
+
+            </div>
+
+        </div>
+
+        <hr style="color: aliceblue;">
+
+        <center><a href="{% url 'home' %}">STATSQUERY 2022 - All Rights Reserved</a></center>
+
+    </div>
+
+    <!-- Footer Section Ends -->
+
+
+
+    <!-- Scripts -->
+
+    <script src="{% static 'js/home.js'%}"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+    <script>
+
+      AOS.init();
+
+    </script>
+
+    <!-- Scripts Ends -->
+
+</body>
+
+</html>
