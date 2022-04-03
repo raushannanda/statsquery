@@ -1,1 +1,1 @@
-web: gunicorn statweb.wsgi
+web: waitress-serve --port=$PORT statweb.wsgi:application
