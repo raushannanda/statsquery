@@ -21,7 +21,7 @@
             <div class="head">Cotents</div>
             <div class="links">
                 {% for post in postcategory %}
-                {% if forloop.counter == 1 %}<a href="{% url 'activeblog' forloop.counter %}" class="active" >{{post.sno}}.  {{post.name}}</a>{% else %}<a href="">{{post.sno}}.  {{post.name}}</a>{% endif %}
+                {% if forloop.counter == 1 %}<a href="{% url 'activeblog' forloop.counter %}" class="active" >{{post.sno}}.  {{post.name}}</a>{% else %}<a href="{% url 'activeblog' forloop.counter %}">{{post.sno}}.  {{post.name}}</a>{% endif %}
                 
                 {% endfor %}
             </div>
