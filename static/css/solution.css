@@ -1,0 +1,75 @@
+.sol{
+    margin-top: 100px;
+}
+.sol h2{
+    text-align: center;
+}
+.sol .exams{
+    padding-left: 100px;
+}
+.sol .exams a{
+    text-decoration: none;
+    margin: 10px;
+}
+.sol .exams a:hover{
+    color: black;
+}
+
+.year{
+    margin-top: 100px;
+}
+.year h4{
+    text-align: center;
+}
+.year form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    
+}
+.year form select{
+    max-width: 300px;
+    min-width: 300px;
+    align-self: center;
+    padding: 10px;
+    outline: none;
+}
+.year form select option{
+    color: rgb(255, 89, 0);
+}
+.year form input{
+    max-width: 300px;
+    min-width: 300px;
+    align-self: center;
+    padding: 10px;
+    outline: none;
+}
+
+.solhead{
+    margin-top: 100px;
+    text-align: center;
+}
+.ques{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.ques .question{
+    font-size: 20px;
+}
+@media only screen and (max-width:771px){
+    .sol .exams{
+        padding-left:30px;
+    }
+}
+
+p{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 17px;
+  }
+  h1 , h2 ,h3{
+    font-family: 'Lato',sans-serif;
+    font-size: 18px;
+  }
+  a{
+    font-family: 'Lato',sans-serif;
+  }

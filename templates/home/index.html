@@ -26,6 +26,11 @@
 
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
+    {% comment %} Fonts {% endcomment %}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Roboto:wght@300;400;500;700;900&family=Source+Sans+Pro:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+
     <!-- Bootstrap -->
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -108,36 +113,26 @@
 
     <div class="contents">
 
-        <div class="left" data-aos="fade-right" 
+        <div class="left">
 
-        data-aos-duration="1000">
+            <h1>Welcome To Statsquery</h1>
 
-            <h1>welcome</h1>
+            <h4>Learn Statistics</h4>
 
-            <h4>Interested in Statistics?</h4>
 
-            <p>If Yes , You are at the right place. Statsquery helps you in learning statistics from basics.</p>
-
-            <a href="{% url 'blog' %}">Start Learning</a>
+            <div><a href="{% url 'blog' %}">Start Learning</a></div>
 
         </div>
 
-        <div class="right" data-aos="fade-down" 
+        <div class="right">
 
-
-        data-aos-duration="1000">
-
-            <img src="{% static 'images/stat.png'%}" alt="">
+            <img src="{% static '/images/stats.jpg' %}" alt="">
 
         </div>
 
     </div>
 
-    <div>
-
-        <svg width="100%" height="100%" id="svg" viewBox="0 0 1440 300" xmlns="http://www.w3.org/2000/svg" class="transition duration-300 ease-in-out delay-150"><defs><linearGradient id="gradient" x1="50%" y1="100%" x2="50%" y2="0%"><stop offset="5%" stop-color="#7c68eeff"></stop><stop offset="95%" stop-color="#7c68e5ff"></stop></linearGradient></defs><path d="M 0,400 C 0,400 0,200 0,200 C 130.57142857142856,232.78571428571428 261.1428571428571,265.57142857142856 391,271 C 520.8571428571429,276.42857142857144 649.9999999999999,254.5 757,236 C 864.0000000000001,217.5 948.8571428571429,202.42857142857144 1059,197 C 1169.142857142857,191.57142857142856 1304.5714285714284,195.78571428571428 1440,200 C 1440,200 1440,400 1440,400 Z" stroke="none" stroke-width="0" fill="url(#gradient)" class="transition-all duration-300 ease-in-out delay-150 path-0" transform="rotate(-180 720 200)"></path></svg>
-
-    </div>
+   
 
     <!-- Landing of website Ends -->
 
@@ -265,19 +260,19 @@
 
         <h2>GET UPDATES</h2>
 
-        <h4>Stay Updated With Statsquery New Articles</h4>
-
+        <h6>Stay Updated With Statsquery New Articles</h6>
+        
         <form action="" method="post">
-
+            {% csrf_token %}
         <div class="inputbox">
-
-            <input placeholder="Email Address" type="email">
+            {{form.email}}
+            <!-- <input placeholder="Email Address" type="email"> -->
 
         </div>
 
         <div class="agree">
-
-            <input type="checkbox" name="agree" id=""><span> I've read and agree to statsquery's written <a href="">Privacy Policy</a></span> and <a href="">TermsConditions</a>
+            
+            <!-- <input type="checkbox" name="agree" id=""><span> I've read and agree to statsquery's written <a href="{% url 'privacy' %}">Privacy Policy</a> and <a href="{% url 'terms' %}">TermsConditions</a></span> -->
 
         </div>
 
@@ -296,6 +291,7 @@
     
 
     <!-- Share Icons Starts -->
+    <center><h2 style="margin-top: 30px;">Share</h2></center>
 
     <div class="sharethis-inline-share-buttons share"></div>
 
@@ -307,13 +303,13 @@
 
     <div>
 
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 300"><path fill="#7b68ee" fill-opacity="10" d="M0,160L120,181.3C240,203,480,245,720,245.3C960,245,1200,203,1320,181.3L1440,160L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#000" fill-opacity="1" d="M0,224L48,234.7C96,245,192,267,288,277.3C384,288,480,288,576,272C672,256,768,224,864,218.7C960,213,1056,235,1152,234.7C1248,235,1344,213,1392,202.7L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
 
     </div>
 
 
 
-    <div class="footer" style="height:100px;background-color:mediumslateblue;width: 100%;">
+    <div class="footer">
 
         <div class="fgrid">
 
@@ -341,7 +337,7 @@
 
         </div>
 
-        <hr style="color: aliceblue;">
+        
 
         <center><a href="{% url 'home' %}">STATSQUERY 2022 - All Rights Reserved</a></center>
 
@@ -349,7 +345,7 @@
 
     <!-- Footer Section Ends -->
 
-
+    
 
     <!-- Scripts -->
 

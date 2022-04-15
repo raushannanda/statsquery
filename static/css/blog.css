@@ -16,7 +16,7 @@
 
 .blogmain .left .head {
   text-align: center;
-  background-color: mediumslateblue;
+  background-color: rgb(5, 5, 5);
   color: aliceblue;
   padding: 10px;
 }
@@ -116,6 +116,8 @@
   -webkit-box-shadow: 5px 5px 3px gray;
           box-shadow: 5px 5px 3px gray;
   color: black;
+  min-width: 300px;
+  min-height: 250px;
 }
 
 @media only screen and (max-width: 751px) {
@@ -131,6 +133,18 @@
   .blogmain .left {
     max-height: calc(100vh - 135px);
     overflow-y: auto;
+    margin-top: 2px;
   }
 }
 /*# sourceMappingURL=blog.css.map */
+p{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 17px;
+}
+h1 , h2 ,h3{
+  font-family: 'Lato',sans-serif;
+  font-size: 18px;
+}
+a{
+  font-family: 'Lato',sans-serif;
+}

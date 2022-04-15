@@ -27,7 +27,9 @@ urlpatterns = [
     path('terms/',views.terms,name='terms'),
     path('blog/<int:slug>/',vlogview.Vloglink,name='activeblog'),
     path('posts/<str:postid>',vlogview.Posts,name='post'),
-    path('solution',solutionView.Solution,name='solution'),
+    path('solution',solutionView.Solutions,name='solution'),
+    path('solution/<str:examname>/',solutionView.Solutionyears,name="solutionyears"),
+     path('solution/<str:examname>/<int:year>',solutionView.Solutionyears,name="examsolution"),
     path('contact/',views.contact,name='contact'),
     path('about/',views.about,name='about'),
 ]

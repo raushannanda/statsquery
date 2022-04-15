@@ -1,4 +1,5 @@
 from django.db import models
+from djongo import models as djmodels
 from django.core.exceptions import ValidationError
 from django.utils.translation import gettext_lazy as _
 # Create your models here.
@@ -46,4 +47,7 @@ class Post(models.Model):
 
     objects = models.Manager()
 
+class SubEmail(djmodels.Model):
+    email  = models.EmailField(unique=True,primary_key=True)
 
+    objects = models.Manager()

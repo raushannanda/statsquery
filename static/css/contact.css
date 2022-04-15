@@ -55,3 +55,14 @@ body {
     color: antiquewhite;
   }
   /*# sourceMappingURL=contact.css.map */
+  p{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 17px;
+  }
+  h1 , h2 ,h3{
+    font-family: 'Lato',sans-serif;
+    font-size: 18px;
+  }
+  a{
+    font-family: 'Lato',sans-serif;
+  }

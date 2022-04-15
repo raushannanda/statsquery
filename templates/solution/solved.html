@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/solution.css'%}">
+</head>
+<body>
+    {% for solution in solutions|slice:":1" %}
+    <div class="solhead">
+        <h3>{{solution.exam}} {{solution.year}} Paper {{solution.paper}}</h3>
+    </div>
+    {% endfor %}
+    
+    {% include 'navbar/index.html' %}
+    {% for solution in solutions %}
+    
+    <div class="ques">
+        <p class="question"><strong>Q.{{solution.q_no}}</strong>
+            {{solution.question}}
+        </p>
+        <p>
+            <strong>Answer</strong>
+            {{solution.solution}}
+        </p>
+    </div>
+    
+    {% endfor %}
+    {% include 'footer/index.html' %}
+</body>
+</html>

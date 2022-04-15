@@ -14,25 +14,24 @@
         <div class="navmar"></div>
         <!--Start of main div -->
         <div class="maindiv">
-            <div class="contents">
-            </div>
             <!--A short description of topics in list of contents -->
             <div class="descrip">
                 <div class="rellink">
                     <a href="/blog/{{posts.category}}/{{catindex}}">Inference> New Post</a>
                 </div>
                 <div class="ptitle">
-                    <h4>Welcome</h4>
+                    <h4>{{post.title}}</h4>
                 </div>
                 <hr>
                 <div class="pdetail">
-                    <div class="author"><strong>BY :Raushan Kumar</strong></div>
-                    <div class="created">10-12-2020</div>
+                    <div class="author"><strong>BY :{{post.author}}</strong></div>
+                    <div class="created">
+                        {{post.last_updated}}
+                    </div>
                 </div>
                 <hr>
-                <div class="pdes">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
-    
-                    The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</div>
+                <div class="pdes">{{post.post}}</div>
+                
             </div>
             <!--siderbar in right-->
             <div class="rightside">
@@ -41,16 +40,21 @@
                 </div>
                 
                 <hr style="margin:0px">
+                {% for exam in exams %}
                 <a href="/blog/solution/{{exam.exam_name}}">
-                <div class="quelist"> 
-                   1. Iss
-                </div>
+                    <div class="quelist"> 
+                       {{forloop.counter}}. {{exam.exam_name}}
+                    </div>
                 </a>
+                {% endfor %}
+                
             </div>
         </div>
         <!--end of main div-->
     </div>
-    
+    {% include 'footer/index.html' %}
     <script src="{% static 'blog/blog.js' %}"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </body>
 </html>

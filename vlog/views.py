@@ -26,7 +26,7 @@ def Vloglink(request,slug):
 
 def Posts(request,postid):
     allposts = Post.objects.all()[:6]
-    posts = Post.objects.get(sno = postid)
-    catindex = PostCategory.objects.get(name=posts.category)
+    post = Post.objects.get(sno = postid)
+    catindex = PostCategory.objects.get(name=post.category)
     exl = ExamList.objects.all()
-    return render(request,'blog/post.html',{'posts':posts,'exams':exl,'catindex':catindex.sno,'allposts':allposts})
+    return render(request,'blog/post.html',{'post':post,'exams':exl,'catindex':catindex.sno,'allposts':allposts})

@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/solution.css'%}">
+</head>
+<body>
+    {% include 'navbar/index.html' %}
+<div class="year">
+    <h4>{{examname}} Previous Years Solved Question</h4>
+    <form action="" method="get">
+        <select name="year" id="">
+            <option value="" disabled selected>Choose Year</option>
+        {% for year in years %}
+            <option value="{{year}}">{{year}}</option>
+        {% endfor %}
+        </select>
+        {% if examname == 'JAM'  %}
+        <select name="exam" id="">
+            <option value="" disabled selected>Choose Paper</option>
+            <option value="1">Paper1</option>
+            <option value="2">Paper2</option>
+            <option value="3">Paper3</option>
+            <option value="4">Paper4</option>
+        </select>
+        {% endif %}
+        <input type="submit" value="GO">
+    </form>
+</div>
+{% include 'footer/index.html' %}
+</body>
+</html>
