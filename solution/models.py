@@ -41,7 +41,8 @@ class Solution(models.Model):
     question = models.TextField(validators=[script_injection])
     solution = models.TextField(validators=[script_injection])
     last_updated = models.DateField( auto_now=False, auto_now_add=False)
-    objects = models.Manager()
+
+    
 
     def __str__(self):
         return str(self.sno)
