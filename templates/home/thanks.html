@@ -1,0 +1,24 @@
+{% include 'navbar/index.html' %}
+<div class="thank"><p>Thanks For Your Review. We shall reply you soon.</p><br><p>Redirecting to homepage....</p></div>
+<div></div>
+<style>
+    .thank{
+        margin-top: 300px;
+        margin-bottom: 300px;
+        display: flex;
+        flex-direction: column;
+        
+    }
+    p{
+        margin-left: 50%;
+        transform: translateX(-50%);
+        font-size: 20px;
+        color: rgb(25, 0, 255);
+    }
+</style>
+<script>
+    setTimeout(() => {
+        window.location.replace("/");
+    }, 5000);
+</script>
+{% include 'footer/index.html' %}

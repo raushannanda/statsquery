@@ -33,7 +33,7 @@
     letter-spacing: 0.05rem;
     color: #1f1c1c;
     font-size: 18px;
-    background-color: #b6a9a9c8;
+    background-color: #e3dbdb92;
   }
   
   .rightside a {
@@ -42,7 +42,7 @@
   }
   
   .rightside .quelist:hover {
-    background-color: #56555a9b;
+    background-color: #8a898f9b;
   }
   
   .des {
@@ -212,7 +212,7 @@
   /*# sourceMappingURL=blogpost.css.map */
   p{
     font-family: 'Open Sans', sans-serif;
-    font-size: 17px;
+    font-size: 16px;
   }
   h1 , h2 ,h3{
     font-family: 'Lato',sans-serif;

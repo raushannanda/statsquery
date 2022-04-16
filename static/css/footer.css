@@ -20,9 +20,11 @@
 .footer .fgrid div {
   -ms-grid-column-align: center;
       justify-self: center;
+      display: flex;
+      flex-direction: column;
 }
 
-.footer .fgrid div h5 {
+.footer .fgrid div h6 {
   color: #8f958ceb;
 }
 

@@ -31,7 +31,11 @@
             {% for post in postcategory %}
             {% if post.sno == 1 %}
             <h2><center>{{post.name}}</center></h2>
-            <div><p>{{post.description}}</p></div>
+            <div>
+            {% autoescape on %}
+            {{post.description}}
+            {% endautoescape %} 
+            </div>
             {% endif %}
             {% endfor %}
           
@@ -40,7 +44,7 @@
             <div class="head">Solved Papers</div>
             <div class="links">
               {% for exam in exams %}
-              <a href="">{{forloop.counter}}.  {{exam.exam_name}}</a>
+              <a href="{% url 'solutionyears' exam.exam_name %}">{{forloop.counter}}.  {{exam.exam_name}}</a>
               {% endfor %}
           </div>
         </div>
@@ -48,17 +52,18 @@
     <h2><center>LATEST POSTS</center></h2>
     <div class="bposts">
         {% for post in posts %}
-        <a href="">
+        
           <div class="card">
             <div class="card-body">
               <h5 class="card-title">{{post.title}}</h5>
               <p class="card-text">{{post.post|truncatechars:100}}</p>
+              <a href="{% url 'post' post.sno %}" class="btn btn-primary">Read More</a>
             </div>
             <div class="card-footer">
               <small class="text-muted">Last updated {{post.last_updated}}</small>
             </div>
           </div>
-        </a>
+       
         {% endfor %}
         
     </div>

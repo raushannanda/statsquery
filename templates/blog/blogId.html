@@ -31,7 +31,7 @@
             {% for post in postcategory %}
             {% if post.sno == query.sno %}
             <h2><center>{{post.name}}</center></h2>
-            <div>{{post.description}}</div>
+            <div>{% autoescape on %}{{post.description}}{% endautoescape %}</div>
             {% endif %}
             {% endfor %}
           
@@ -40,7 +40,7 @@
             <div class="head">Solved Papers</div>
             <div class="links">
               {% for exam in exams %}
-              <a href="{% url 'solution' %}">{{forloop.counter}}.  {{exam.exam_name}}</a>
+              <a href="{% url 'solutionyears' exam.exam_name %}">{{forloop.counter}}.  {{exam.exam_name}}</a>
               {% endfor %}
           </div>
         </div>

@@ -30,7 +30,7 @@
                     </div>
                 </div>
                 <hr>
-                <div class="pdes">{{post.post}}</div>
+                <div class="pdes">{% autoescape on %}{{post.post}}{% endautoescape %}</div>
                 
             </div>
             <!--siderbar in right-->
@@ -41,7 +41,7 @@
                 
                 <hr style="margin:0px">
                 {% for exam in exams %}
-                <a href="/blog/solution/{{exam.exam_name}}">
+                <a href="{% url 'solutionyears' exam.exam_name %}">
                     <div class="quelist"> 
                        {{forloop.counter}}. {{exam.exam_name}}
                     </div>

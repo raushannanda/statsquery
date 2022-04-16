@@ -417,9 +417,11 @@ body {
   .footer .fgrid div {
     -ms-grid-column-align: center;
         justify-self: center;
+        display: flex;
+        flex-direction: column;
   }
   
-  .footer .fgrid div h5 {
+  .footer .fgrid div h6 {
     color: #8f958ceb;
     text-transform: uppercase;
   }
@@ -433,7 +435,10 @@ body {
     text-decoration: none;
   }
    /*# sourceMappingURL=home.css.map */
-
+  .card{
+    min-width: 295px;
+    min-height: 300px;
+  }
 
    .card-title{
     font-family: 'Roboto', sans-serif;
@@ -444,6 +449,7 @@ body {
     font-size: 18px;
    }
    p{
-     font-size: 18px;
+     font-size: 16px;
      font-weight: 400;
+     margin-bottom: 0px;
    }

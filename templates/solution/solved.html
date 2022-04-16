@@ -17,7 +17,7 @@
     
     {% include 'navbar/index.html' %}
     {% for solution in solutions %}
-    
+    {% autoescape on %}
     <div class="ques">
         <p class="question"><strong>Q.{{solution.q_no}}</strong>
             {{solution.question}}
@@ -27,7 +27,7 @@
             {{solution.solution}}
         </p>
     </div>
-    
+    {% endautoescape %}
     {% endfor %}
     {% include 'footer/index.html' %}
 </body>

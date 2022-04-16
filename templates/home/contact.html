@@ -16,9 +16,11 @@
             <h2><center>Conatct Us</center></h2>
             <h5><center>Write suggessions or ask query </center></h5>
         </div>
-        <form action="">
-            <input type="email" placeholder="Email" name="" id="">
-            <textarea name="message" id="" cols="30" rows="10" placeholder="Write Message"></textarea>
+        <form action="" method="post">
+            {% csrf_token %}
+            {% comment %} <input type="email" placeholder="Email" name="" id=""> {% endcomment %}
+            {{form.email}}
+            {{form.message}}
             <input type="submit" value="Submit">
         </form>
     </div>
