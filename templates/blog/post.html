@@ -17,7 +17,7 @@
             <!--A short description of topics in list of contents -->
             <div class="descrip">
                 <div class="rellink">
-                    <a href="/blog/{{posts.category}}/{{catindex}}">Inference> New Post</a>
+                    <a href="{% url 'activeblog' catindex %}">{{post.category}} > </a>{{post.title}}
                 </div>
                 <div class="ptitle">
                     <h4>{{post.title}}</h4>
