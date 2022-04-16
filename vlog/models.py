@@ -51,3 +51,9 @@ class SubEmail(djmodels.Model):
     email  = models.EmailField(unique=True,primary_key=True)
 
     objects = models.Manager()
+
+class Contact(models.Model):
+    email  = models.EmailField(unique=True,primary_key=True)
+    message = models.CharField(max_length=5000)
+
+    objects = models.Manager()

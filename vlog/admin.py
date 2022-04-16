@@ -1,6 +1,6 @@
 from pickle import TRUE
 from django.contrib import admin
-from .models import Post,PostCategory
+from .models import Post,PostCategory,Contact
 from django.template.defaultfilters import truncatechars
 # Register your models here.
 
@@ -17,7 +17,11 @@ class PostCategoryAdmin(admin.ModelAdmin):
 class PostAdmin(admin.ModelAdmin):
     list_display = ('title','post','created',short_post)
     list_filter = ('title','created',)
+
+class ContactAdmin(admin.ModelAdmin):
+    list_display = ('email','message')
 admin.site.register(PostCategory,PostCategoryAdmin)
 admin.site.register(Post,PostAdmin)
+admin.site.register(Contact,ContactAdmin)
 
 
