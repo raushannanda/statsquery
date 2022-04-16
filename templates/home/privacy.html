@@ -1,42 +1,8 @@
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        body{
-            padding-left:10%;
-            padding-right:10%;
-        }
-        h1,h2{
-            font-size:40px;
-            font-weight:700;
-            line-height:60px;
-        }
-        p{
-            display: block;
-            margin-block-start: 1em;
-            margin-block-end: 1em;
-            margin-inline-start: 0px;
-            margin-inline-end: 0px;
-            font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
-        }
-        p,a,li{
-            font-size:16px;
-            margin:0 0 16px;
-        }
-       strong{
-            font-weight:bold;
-        }
-        a{text-decoration: none;}
-    </style>
-</head>
-<body>
+
     {% include 'navbar/index.html' %}
     <div style="margin-top:85px"></div>
+<div  style="margin-left:30px;margin-right:30px">
     <h1>Privacy Policy</h1>
 <p>Last updated: March 31, 2022</p>
 <p>This Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your information when You use the Service and tells You about Your privacy rights and how the law protects You.</p>
@@ -203,5 +169,5 @@
 <ul>
 <li>By email: <a href="mailto:contact@statsquery.com">contact@statsquery.com</a></li>
 </ul><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-</body>
-</html>
+</div>
+{% include 'footer/index.html' %}

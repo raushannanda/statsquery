@@ -1,40 +1,5 @@
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        body{
-            padding-left:10%;
-            padding-right:10%;
-        }
-        h1,h2{
-            font-size:40px;
-            font-weight:700;
-            line-height:60px;
-        }
-        p{
-            display: block;
-            margin-block-start: 1em;
-            margin-block-end: 1em;
-            margin-inline-start: 0px;
-            margin-inline-end: 0px;
-            font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
-        }
-        p,a,li{
-            font-size:16px;
-            margin:0 0 16px;
-        }
-       strong{
-            font-weight:bold;
-        }
-        a{text-decoration: none;}
-    </style>
-</head>
-<body>
+<div style="margin-left:30px;margin-right:30px;">
     {% include 'navbar/index.html' %}
     <div style="margin-top:85px"></div>
 <h1>Terms and Conditions</h1>
@@ -62,7 +27,7 @@
 <p><strong>Service</strong> refers to the Website.</p>
 </li>
 <li>
-<p><strong>Terms and Conditions</strong> (also referred as &quot;Terms&quot;) mean these Terms and Conditions that form the entire agreement between You and the Company regarding the use of the Service. This Terms and Conditions agreement has been created with the help of the <a href="https://www.freeprivacypolicy.com/blog/sample-terms-conditions-template/" target="_blank">Terms and Conditions Template</a>.</p>
+<p><strong>Terms and Conditions</strong> (also referred as &quot;Terms&quot;) mean these Terms and Conditions that form the entire agreement between You and the Company regarding the use of the Service.</p>
 </li>
 <li>
 <p><strong>Third-party Social Media Service</strong> means any services or content (including data, information, products or services) provided by a third-party that may be displayed, included or made available by the Service.</p>
@@ -124,5 +89,5 @@ You agree that the original English text shall prevail in the case of a dispute.
 <p>By visiting this page on our website: <a href="https://statsquery.com/contact" rel="external nofollow noopener" target="_blank">https://statsquery.com/contact</a></p>
 </li>
 </ul>
-</body>
-</html>
+</div>
+{% include 'footer/index.html' %}

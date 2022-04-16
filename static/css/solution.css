@@ -18,11 +18,13 @@
 
 .year{
     margin-top: 100px;
+    margin-bottom: 150px;
 }
 .year h4{
     text-align: center;
 }
 .year form{
+    margin-top: 100px;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -55,7 +57,8 @@
     margin-right: 10%;
 }
 .ques .question{
-    font-size: 20px;
+    font-size: 16px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 @media only screen and (max-width:771px){
     .sol .exams{

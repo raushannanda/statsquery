@@ -121,7 +121,7 @@ body {
   .contents .left  a {
     text-decoration: none;
     padding: 10px;
-    border: solid 1px #04a3a0;
+    border: solid 1px #14f804;
     color: aliceblue;
     text-transform: uppercase;
     font-size: 18px;
@@ -130,7 +130,7 @@ body {
   }
   
   .contents .left a:hover {
-    background-color: rgb(122, 2, 197);
+    background-color: rgb(5, 5, 5);
     color: rgb(250, 250, 252);
   }
   

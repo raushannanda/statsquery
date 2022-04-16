@@ -19,11 +19,11 @@
     {% for solution in solutions %}
     {% autoescape on %}
     <div class="ques">
-        <p class="question"><strong>Q.{{solution.q_no}}</strong>
+        <p class="question"><strong>Q.{{solution.q_no}}: </strong> 
             {{solution.question}}
         </p>
         <p>
-            <strong>Answer</strong>
+            <strong>Answer:</strong>
             {{solution.solution}}
         </p>
     </div>
